@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/log.png" class="logo">
+            <ul>
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+              
+            </ul>
+             
+        </nav>
+        <div class="header-text">
+          <p>UI/UX Designer</p>
+          <h1>Hi,I'm <span>John</span><br>Oduor From Kenya</h1>
+        </div>
+    </div>
+  </div>
+  <!-------------------------------about-------------------------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="Images/joh.png" >
+        </div>
+
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I am a passionate and creative individual with a strong talent for both technology and music. I have expertise in front-end development, including HTML, CSS, JavaScript, and React, allowing me to build visually appealing and responsive web applications. At the same time, I am deeply dedicated to music and proficient in playing multiple instruments, including the double bass, which has helped me develop discipline, creativity, and adaptability. Additionally, I have skills in graphic design using Adobe Illustrator, enabling me to create visually compelling designs. My unique combination of technical and artistic skills enables me to approach problems with innovation and precision. I am always eager to learn, grow, and refine 
+            my abilities to excel in coding, musical expression, and design.</p>
+             <div class="tab-title">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+             </div>
+             <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br>Designing Websites</li>
+                <li><span>Web development</span><br>Designing Websites</li>
+                <li><span>App development</span><br>Designing Apps</li>
+               
+              </ul>
+             </div>
+
+             <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2023-current</span><br>Software Development Training</li>
+                <li><span>2024</span><br>Designing Websites</li>
+                <li><span>2025</span><br>Designing Apps</li>
+               
+              </ul>
+             </div>
+
+             <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2017</span><br>St John School primary</li>
+                <li><span>2022</span><br>CBC Grade 6</li>
+                <li><span>2023</span><br>Junior School Grade 7</li>
+               
+              </ul>
+             </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------------------services------------------------------------>
+     <div id="services">
+        <div class="container">
+          <h1 class="sub-title">My Services</h1>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Design</h2>
+               <p>I have expertise in HTML, CSS, JavaScript, and React, enabling me to build visually appealing 
+                 and responsive web applications. 
+                 I enjoy crafting seamless user experiences by combining design principles with technical knowledge.
+               </p>
+               <a href="#">Learn more</a>
+            </div>
+           
+            <div>
+              <i class="fas fa-palette"></i>
+              <h2>Graphic Design</h2>
+               <p>I use Adobe Illustrator to create visually compelling designs, 
+                blending creativity with precision to transform ideas into engaging digital visuals.
+               </p>
+               <a href="#">Learn more</a>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-music"></i>
+              <h2>Music</h2>
+               <p> I have a deep passion for music, which allows me to express creativity and emotions through sound. 
+                 Playing multiple instruments, including the double bass, has helped me develop discipline, adaptability, and artistic 
+                 sensitivity.
+               </p>
+               <a href="#">Learn more</a>
+            </div>
+            
+
+          </div>
+        </div>
+     </div>
+<!-- -----------------------------------------------------portfolio----------------------------------- -->
+     <div id="portfolio">
+       <div class="container">
+        <h1 class="sub-title">My Work</h1>
+         <div class="work-list">
+           <div class="work">
+              <img src="Images/work-1.PNG" alt="">
+              <div class="layer">
+                <h3>Dragon Game</h3>
+                <p> A text-based RPG where players start in the town square, buy items, fight monsters, 
+                  gain experience, and collect gold to prepare for a final battle against a dragon terrorizing the
+                 town.
+                </p>
+                    <a href="https://rp-g-dragon-repeller.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+              </div>
+           </div>
+           <div class="work">
+            <img src="Images/work-2.PNG">
+            <div class="layer">
+              <h3>Todo App</h3>
+              <p> The Todo App is a responsive task manager built with HTML, CSS, and JavaScript. 
+                It uses localStorage for persistent task saving and allows 
+                users to add, edit, and delete tasks easily.</p>
+                  <a href="https://task-manager-ap.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+         </div>
+         <div class="work">
+          <img src="Images/work-3.PNG">
+          <div class="layer">
+            <h3>Registration Form App</h3>
+            <p> This project is a responsive registration form built with HTML and CSS, 
+              allowing users to enter personal details like name, email, and password. 
+              It features a modern and user-friendly design.</p>
+                <a href="https://registration-interface.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+           </div>
+         </div>
+             <a href="https://github.com/JohnM-Oduor?tab=repositories" class="btn">See more </a>
+       </div>
+     </div>
+     <!-- -----------------------------------------------contact------------------- -->
+      <div id="contact">
+        <div class="container">
+          <div class="row"> 
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-paper-plane"></i> oduorjohn104@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i> 0702178973</p>
+              <div class="social-icons">
+                <a href="https://github.com/JohnM-Oduor?tab=repositories"><i class="fa-brands fa-github"></i></a>
+                <a href="https://app.netlify.com/teams/oduorjohn104/sites"><i class="fab fa-neos"></i></a>
+              </div>
+              <a href="Images/John Oduor Curriculum Vitae.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+         <div class="copyright">
+           <p>Copyright © JohnOduor <i class="fa-solid fa-heart"></i></p>
+         </div>
+      </div>
+   <script>
+   
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+   function opentab(tabname){
+     for(tablink of tablinks){
+       tablink.classList.remove("active-link");
+     }
+     for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+     }
+     event.currentTarget.classList.add("active-link")
+     document.getElementById(tabname).classList.add("active-tab")
+   }
+
+   </script>
+   <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOhsTJzfjIE5H-H0sUfQbs-fO5IUpoIV8GHEVr8coYg6zv0cuf3ONPlRdui9Ab4uJl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent succesfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          }, 500)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
