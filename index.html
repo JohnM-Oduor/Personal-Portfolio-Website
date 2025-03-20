@@ -200,22 +200,28 @@
 
    </script>
    <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOhsTJzfjIE5H-H0sUfQbs-fO5IUpoIV8GHEVr8coYg6zv0cuf3ONPlRdui9Ab4uJl/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
+   
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzOhsTJzfjIE5H-H0sUfQbs-fO5IUpoIV8GHEVr8coYg6zv0cuf3ONPlRdui9Ab4uJl/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.innerHTML = "Message sent succesfully"
-          setTimeout(function(){
-            msg.innerHTML = ""
-          }, 500)
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    
+    // Show the success message immediately
+    msg.innerHTML = "Message sent successfully"
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        setTimeout(function(){
+          msg.innerHTML = ""
+        }, 500)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
   </script>
 </body>
 </html>

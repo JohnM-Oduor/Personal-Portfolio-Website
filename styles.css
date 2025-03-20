@@ -329,6 +329,10 @@ form .btn2:hover{
 }
 form .btn2:active{
      transform: scale(0.95)
+}#msg {
+    color: green;
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 .copyright{
@@ -340,7 +344,7 @@ form .btn2:active{
     margin-top: 20px;
 }
 /* --------------------css for small screens------------------------ */
-/* -------------------- Fully Optimized Small Screen CSS -------------------- */
+/* ---------------- Responsive Small Screen Styles ---------------- */
 @media only screen and (max-width: 768px) {
 
     /* ----- General Fixes ----- */
@@ -375,7 +379,7 @@ form .btn2:active{
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(10, 10, 35, 0.9);
         position: absolute;
         top: 60px;
         left: 0;
@@ -477,4 +481,5 @@ form .btn2:active{
         padding: 15px 0;
         text-align: center;
     }
+    
 }
