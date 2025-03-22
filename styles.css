@@ -19,6 +19,9 @@ body{
     background-size: 1300px;
     background-position: center;
 }
+.header-text{
+    border: 10px solid blue;
+}
 .container{
     padding: 10px 10%;
 }
@@ -75,6 +78,7 @@ width:100%;
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    border: none;
 }
 .header-text h1{
     font-size: 60px;
@@ -343,143 +347,146 @@ form .btn2:active{
     font-weight: 300;
     margin-top: 20px;
 }
+ nav .fas{
+    display: none;
+} 
 /* --------------------css for small screens------------------------ */
 /* ---------------- Responsive Small Screen Styles ---------------- */
-@media only screen and (max-width: 768px) {
 
-    /* ----- General Fixes ----- */
-    * {
-        overflow-x: hidden; /* Prevents horizontal scrolling */
+@media screen and (max-width: 600px) {
+    #header{
+      margin-bottom: -20rem;  
     }
-    body {
-        padding: 0;
-        margin: 0;
-        width: 100%;
+    .sub-title{
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
-
-    /* ----- Header Section ----- */
-    .header-text {
-        margin-top: 50%;
-        font-size: 14px;
-        text-align: center;
-        padding: 0 10px;
+    body{
+     margin-left: 30px;
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+   }
+    #header{
+        margin-top: 5rem;
     }
-    .header-text h1 {
-        font-size: 28px;
-        word-break: break-word;
+    .about{
+        margin-top: 10rem;
     }
-
-    /* ----- Navigation Menu ----- */
     nav {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
+        padding: 15px 5%;
+        justify-content: space-between;
+        position: fixed;
     }
+    .johnimg{
+        margin-bottom: 5rem;
+    }
+    /* Hide menu items and show icons for mobile */
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(10, 10, 35, 0.9);
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
-        padding: 10px 0;
+        background: #000;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         z-index: 1001;
     }
+
     nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    nav ul.show {
-        display: flex;
-    }
-    .menu-icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: #fff;
-    }
-
-    /* ----- About Section ----- */
-    .row {
-        flex-direction: column;
+        margin: 15px 0;
         text-align: center;
-        gap: 20px;
-    }
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
-        padding: 0 15px;
-    }
-    .about-col-1 img {
-        max-width: 90%;
-        height: auto;
-    }
-    .sub-title {
-        font-size: 35px;
     }
 
-    /* ----- Services Section ----- */
-    .services-list {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
+    nav .fa-bars {
+        display: block;
+        cursor: pointer;
     }
-    .services-list div {
-        padding: 20px;
+
+    nav .fa-times {
+        display: none;
     }
-    .services-list div i {
+
+    .header-text h1 {
         font-size: 40px;
     }
-    .services-list div h2 {
-        font-size: 24px;
+
+    .header-text p {
+        font-size: 20px;
     }
 
-    /* ----- Portfolio Section ----- */
-    .work-list {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-    }
-    .work img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* ----- Contact Section ----- */
-    .contact-left, .contact-right {
-        flex-basis: 100%;
-        text-align: center;
-        padding: 0 10px;
-    }
-    .contact-left p {
-        font-size: 14px;
-    }
-    .social-icons {
+    /* Toggle menu visibility */
+    nav.active ul {
         display: flex;
-        justify-content: center;
-        gap: 10px;
     }
 
-    /* ----- Forms & Buttons ----- */
-    form input, form textarea {
-        font-size: 14px;
-        padding: 12px;
-        width: 100%;
+    /* Menu items for mobile */
+    nav ul li a {
+        font-size: 20px;
+        padding: 10px;
     }
+
+    /* Show close icon when the menu is active */
+    nav.active .fa-times {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* About Section */
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Services Section */
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Portfolio Section */
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
     .btn {
         width: 100%;
+        padding: 14px 50px;
         text-align: center;
-        padding: 12px;
-        font-size: 16px;
-    }
-    .btn.btn2 {
-        width: 100%;
-        padding: 14px;
     }
 
-    /* ----- Footer Section ----- */
-    .copyright {
-        font-size: 14px;
-        padding: 15px 0;
-        text-align: center;
+    /* Contact Form */
+    .contact-left, .contact-right {
+        flex-basis: 100%;
     }
+
+    form .btn2 {
+        width: 100%;
+        padding: 14px 0;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+    }
+
+    .social-icons a:hover {
+        transform: translateY(0);
+    }
+
+    .contact-right form input,
+    .contact-right form textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+.copyright {
     
+    background: #262626;
+   
 }
