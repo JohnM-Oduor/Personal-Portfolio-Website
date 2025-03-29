@@ -7,6 +7,8 @@
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Add your existing CSS here, including any media queries */
         @media (max-width: 768px) {
@@ -242,6 +244,24 @@
       closeIcon.style.display = 'none';
       hamburger.style.display = 'block';
     });
-  </script>
+  
+</script>
+ <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzbM3MAj9wFK8K3939UuZwLTYSXYxX7EDxJmhcN8f725FXfdfPPcGyjG5bqjOxfoawK/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg");
+   form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+        msg.innerText = "";
+      }, 2000);
+       form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
