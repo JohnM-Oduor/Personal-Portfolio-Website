@@ -9,8 +9,10 @@ html{
 
 }
 body{
-    background: #000000;
+    /* background: #000000; */
     color: #fff;
+    background: linear-gradient(45deg, #0a0a0a, #020284, #032565, #0a0a0a, #121a30, rgb(255, 32, 255)); /* background: linear-gradient(45deg, #1f1c2c, #928dab, #373b44, #485563, #232526, #414345, #2c3e50); */ /* background: linear-gradient(45deg, #0d0a14, #16203a, #1f2329, #1b2b3a, #181a1c, #142233, #0a1926); */
+    background-size: 400% 400%
 }
 #header{
     width: 100%;
@@ -366,6 +368,12 @@ form .btn2:active{
      min-height: 100vh;
     display: flex;
     flex-direction: column;
+     background: #302f2f;
+     color: #fff;
+     /* background: linear-gradient(45deg, #0a0a0a, #020284, #032565, #0a0a0a, #121a30, rgb(255, 32, 255)); 
+     /* background: linear-gradient(45deg, #1f1c2c, #928dab, #373b44, #485563, #232526, #414345, #2c3e50); */ 
+     /* background: linear-gradient(45deg, #0d0a14, #16203a, #1f2329, #1b2b3a, #181a1c, #142233, #0a1926); */
+     background-size: 400% 400% 
    }
     #header{
         margin-top: 5rem;
@@ -486,7 +494,8 @@ form .btn2:active{
 }
 
 .copyright {
-    
+    margin-left: 0;
+    margin-right: 0;
     background: #262626;
    
 }
