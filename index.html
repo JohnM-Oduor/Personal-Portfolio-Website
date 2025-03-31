@@ -11,46 +11,80 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Add your existing CSS here, including any media queries */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none; /* Hide the menu by default */
-                flex-direction: column;
-                width: 100%;
-                padding: 20px 0;
-            }
+       /* Default styles for large screens (bigger than 768px) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: black;
+}
+.header-text{
 
-            nav.scrolled ul {
-                display: flex; /* Show the menu when scrolling */
-            }
+}
+nav .logo {
+    max-width: 120px;
+}
 
-            nav .fa-bars {
-                display: block; /* Show the hamburger icon */
-                cursor: pointer;
-            }
-
-            nav .fa-times {
-                display: none; /* Hide the close icon initially */
-            }
-
-            nav.scrolled .fa-times {
-                display: block; /* Show the close icon when scrolled */
-            }
-        }
-        nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-       top: 60px;
-      left: 0;
-     width: 100%;
-     background: black;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-     text-align: center;
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Space between menu items */
+    list-style: none;
 }
 
 nav ul li {
-  padding: 10px 0;
+    padding: 10px 15px;
+    text-decoration: none;
 }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav .fa-bars,
+nav .fa-times {
+    display: none; /* Hide the hamburger icon on large screens */
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        background: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    nav .fa-bars {
+        display: block; /* Show the hamburger icon on smaller screens */
+        cursor: pointer;
+    }
+
+    nav .fa-times {
+        display: none; /* Hide the close icon initially */
+    }
+
+    nav.scrolled .fa-times {
+        display: block; /* Show the close icon when scrolled */
+    }
+}
+
 
     </style>
 </head>
@@ -214,7 +248,7 @@ nav ul li {
           <a href="Images/John Oduor Curriculum Vitae.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-          <form name="submit-to-google-sheet">
+          <form name="submit-to-google-sheet" class="form">
             <input type="text" name="Name" placeholder="Your Name" required>
             <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
