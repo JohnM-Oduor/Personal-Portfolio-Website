@@ -314,9 +314,7 @@ form.addEventListener('submit', e => {
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
             form.reset(); // Reset form quickly
-            setTimeout(() => {
-                msg.innerText = ""; // Clear message after 1 second
-            }, 1000);
+            msg.innerText = ""; // Clear message immediately
         })
         .catch(error => console.error('Error!', error.message));
 });
