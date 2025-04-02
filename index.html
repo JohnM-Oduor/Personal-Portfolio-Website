@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>JOHN PORTFOLIO</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
@@ -304,21 +304,23 @@ closeIcon.addEventListener('click', hideMenu);
 
 </script>
  <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzbM3MAj9wFK8K3939UuZwLTYSXYxX7EDxJmhcN8f725FXfdfPPcGyjG5bqjOxfoawK/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg");
-   form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-        msg.innerText = "";
-      }, 2000);
-       form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzbM3MAj9wFK8K3939UuZwLTYSXYxX7EDxJmhcN8f725FXfdfPPcGyjG5bqjOxfoawK/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    msg.innerHTML = "Message sent successfully"; // Show message immediately
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            form.reset(); // Reset form quickly
+            setTimeout(() => {
+                msg.innerText = ""; // Clear message after 1 second
+            }, 1000);
+        })
+        .catch(error => console.error('Error!', error.message));
+});
+
 </script>
 <!-- Load particles.js -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
