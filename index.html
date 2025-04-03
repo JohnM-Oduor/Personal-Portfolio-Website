@@ -19,9 +19,7 @@ nav {
     padding: 20px;
     background: black;
 }
-.header-text{
 
-}
 nav .logo {
     max-width: 120px;
 }
@@ -52,9 +50,47 @@ nav .fa-bars,
 nav .fa-times {
     display: none; /* Hide the hamburger icon on large screens */
 }
+.header-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  nav ul {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 1s forwards;
+  }
+
+  /* Hamburger and menu icon animation for mobile */
+  .fa-bars {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .fa-times {
+    display: none;
+  }
+
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
 
 @media (max-width: 600px) {
-    nav ul {
+    
+  nav ul {
         display: none; /* Hide the menu by default */
         flex-direction: column;
         width: 100%;
@@ -65,6 +101,9 @@ nav .fa-times {
         left: 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
+    }
+    .header-text{
+        margin-top: 8px;
     }
 
     nav ul li {
