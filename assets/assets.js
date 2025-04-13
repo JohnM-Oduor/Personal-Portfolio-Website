@@ -38,6 +38,7 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
     user_image,
+    profile_img,
     code_icon,
     code_icon_dark,
     edu_icon,

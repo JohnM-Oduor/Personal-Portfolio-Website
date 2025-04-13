@@ -1,22 +1,50 @@
 import { assets, workData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image';
+import { motion } from "motion/react"
 
 const Work = () => {
   return (
-    <div id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
-     <h4 className='text-center mb-2 text-lg font-Ovo'>My portfolio</h4>
-     <h2 className='text-center text-5xl font-Ovo'>
-      My latest work</h2>
+    <motion.div 
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 1}}
+      id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
+
+     <motion.h4 
+     initial={{y: -20, opacity: 0}}
+     whileInView={{y:0, opacity: 1}}
+     transition={{delay: 0.3, duration: 0.5}}
+     className='text-center mb-2 text-lg font-Ovo'>
+      My portfolio</motion.h4>
+
+     <motion.h2 
+     initial={{y: -20, opacity: 0}}
+     whileInView={{y:0, opacity: 1}}
+     transition={{delay: 0.5, duration: 0.5}}
+     className='text-center text-5xl font-Ovo'>
+      My latest work</motion.h2>
         
-        <p className='text-center max-w-2xl mx-auto mt-5 mb-12
+        <motion.p 
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{delay: 0.7, duration: 0.5}}
+        className='text-center max-w-2xl mx-auto mt-5 mb-12
         font-Ovo'>
         Welcome to my web development portfolio! Explore a collection of projects
-        showcasing my expertise in front-end development.</p>
+        showcasing my expertise in front-end development.</motion.p>
        
-         <div className='grid grid-cols-auto lg:grid-cols-4 my-10 gap-5'>
+         <motion.div 
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            transition={{delay: 0.9, duration: 0.6}}
+         className='grid grid-cols-auto lg:grid-cols-4 my-10 gap-5'>
             {workData.map((project, index)=>(
-                <div key={index} 
+                <motion.div 
+                whileHover={{ scale: 1.05}}
+                transition={{ duration: 0.3}}
+
+                key={index} 
                 className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg
                 relative cursor-pointer group'
                 style={{backgroundImage: `url(${project.bgImage})`}}>
@@ -37,12 +65,16 @@ const Work = () => {
 
                     </div>
                       
-                </div>
+                </motion.div>
             ))}
-         </div>
+         </motion.div>
            <p className='text-center max-w-2xl mx-auto mt-5 mb-12
            font-Ovo mb-[-30]'>Click the the link below to see the live demo projects</p>
-         <a 
+         <motion.a 
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{delay: 1.1, duration: 0.5}}
+          
           href="https://github.com/JohnM-Oduor?tab=repositories" 
           className='w-max flex items-center justify-center gap-2
           text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10
@@ -51,10 +83,10 @@ const Work = () => {
           
           Show more 
           <Image src={assets.right_arrow_bold} alt='Right arrow' className='w-4' />
-         </a>
+         </motion.a>
 
 
-    </div>
+    </motion.div>
   )
 }
 
