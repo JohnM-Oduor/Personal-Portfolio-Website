@@ -36,7 +36,7 @@ const About = () => {
              transition={{duration: 0.2}}
              className='w-64 sm:w-80 rounded-3xl max-w-none  mt-[-40 ] mb-[-30]'>
              <Image src={assets.user_image} alt='user' 
-              className='w-80 rounded-3xl sm:mt-[-50] lg:mt-[-390] '/>
+              className='w-80 rounded-3xl sm:mt-[-50] lg:mt-[-260] '/>
             </motion.div>
 
             <motion.div 
@@ -44,7 +44,7 @@ const About = () => {
                whileInView={{opacity:1}}
                transition={{duration: 0.6, delay:0.8}}
                className='flex-1'>
-              <p className='mb-10 max-w-2xl font-Ovo'>I am a passionate and creative individual with a strong talent for both technology and music. 
+              <p className='mb-10 max-w-2xl font-Ovo mt-[-60]'>I am a passionate and creative individual with a strong talent for both technology and music. 
                 I have expertise in front-end development, including HTML, CSS, JavaScript, and React, 
                 allowing me to build visually appealing and responsive web applications.
                  At the same time, I am deeply dedicated to music and proficient in playing multiple instruments, 
