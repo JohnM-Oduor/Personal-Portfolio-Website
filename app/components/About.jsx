@@ -15,7 +15,7 @@ const About = () => {
         initial={{opacity:0, y:-20}}
         whileInView={{opacity:1, y:0}}
         transition={{duration: 0.5, delay: 0.3}}
-        className='text-center mb-2 text-lg font-Ovo mt-20'>
+        className='text-center mb-2 text-lg font-Ovo mt-20 mb-5'>
           Introduction</motion.h4>
         <motion.h2 
          initial={{opacity:0, y: -20}}
@@ -44,7 +44,7 @@ const About = () => {
                whileInView={{opacity:1}}
                transition={{duration: 0.6, delay:0.8}}
                className='flex-1'>
-              <p className='mb-10 max-w-2xl font-Ovo mt-[-60]'>I am a passionate and creative individual with a strong talent for both technology and music. 
+              <p className='mb-10 max-w-2xl font-Ovo mt-[-40]'>I am a passionate and creative individual with a strong talent for both technology and music. 
                 I have expertise in front-end development, including HTML, CSS, JavaScript, and React, 
                 allowing me to build visually appealing and responsive web applications.
                  At the same time, I am deeply dedicated to music and proficient in playing multiple instruments, 
