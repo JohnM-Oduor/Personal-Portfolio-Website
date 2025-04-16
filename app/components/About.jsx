@@ -34,7 +34,7 @@ const About = () => {
              initial={{opacity:0, scale: 0.9}}
              whileInView={{opacity:1, scale: 1}}
              transition={{duration: 0.2}}
-             className='w-64 sm:w-80 rounded-3xl max-w-none  mt-[-40 ] mb-[-30]'>
+             className='w-64 sm:w-80 rounded-3xl max-w-none  mt-[-40 ] mb-[-100]'>
              <Image src={assets.user_image} alt='user' 
               className='w-80 rounded-3xl sm:mt-[-50] lg:mt-[-260] '/>
             </motion.div>
