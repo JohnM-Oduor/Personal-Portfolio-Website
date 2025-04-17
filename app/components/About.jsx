@@ -36,7 +36,7 @@ const About = () => {
              transition={{duration: 0.2}}
              className='w-64 sm:w-80 rounded-3xl max-w-none  mt-[-40 ] mb-[-100]'>
              <Image src={assets.user_image} alt='user' 
-              className='w-80 rounded-3xl sm:mt-[-50] lg:mt-[-260] '/>
+              className='w-80 mb-10 rounded-3xl sm:mt-[-50] lg:mt-[-260] '/>
             </motion.div>
 
             <motion.div 
@@ -84,7 +84,7 @@ const About = () => {
                    initial={{y: 20, opacity:0 }}
                    whileInView={{y: 0, opacity: 1}}
                    transition={{delay:1.3, duration: 0.6}}
-                  className='my-6 text-gray-700 font-Ovo mt-[-220]'>Tools I use</motion.h4>
+                  className='my-6 text-gray-700 font-Ovo mt-[-220] sm:mt-10 lg:mt-[-220'>Tools I use</motion.h4>
                   
                  <motion.ul 
                      initial={{ opacity:0 }}
