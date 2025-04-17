@@ -105,7 +105,8 @@ const Contact = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
           type='submit'
-          className='py-3 px-8 w-max flex items-center justify-between gap-2  text-white rounded-full mx-auto hover:bg-black duration-500'
+          className='py-3 px-8 w-max flex items-center justify-between gap-2  
+          text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer'
         >
           Submit now 
         </motion.button>
