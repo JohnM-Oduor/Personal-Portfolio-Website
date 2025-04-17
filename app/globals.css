@@ -1,8 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
 *{
   font-family: Outfit;
+  nav{
+    color: white;
+  }
+  nav h2{
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    span{
+      color: rgb(0, 140, 255);
+    }
+  }
+  nav li :hover{
+    color: blue;
+  }
+  nav li :active{
+    color: blue;
+    transition: 0.5s;
+  }
+  body{
+    color: white;
+    background-color: black;
+    button{
+      color: white;
+    }
+  }
+   background: black;
 }
-
+form{
+  button{
+    border: white;
+    background-color: rgb(38, 37, 37);
+  }
+}
+ 
