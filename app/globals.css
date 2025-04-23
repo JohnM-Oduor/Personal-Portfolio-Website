@@ -6,12 +6,13 @@
 *{
   font-family: Outfit;
   nav{
-    color: white;
+    color: #000;
   }
   nav h2{
     font-size: 50px;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+    color: #000;
     span{
       color: rgb(0, 140, 255);
     }
@@ -23,14 +24,7 @@
     color: blue;
     transition: 0.5s;
   }
-  body{
-    color: white;
-    background-color: black;
-    button{
-      color: white;
-    }
-  }
-   background: black;
+  
 }
 form{
   button{
