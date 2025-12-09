@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import { FaGithub } from "react-icons/fa";
-import { BiLogoNetlify } from "react-icons/bi";
+import { RiVercelFill } from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -34,11 +34,11 @@ const Footer = () => {
           <li>
             <a
               target='_blank'
-              href='https://app.netlify.com/teams/oduorjohn104/sites'
+              href='https://vercel.com/john-oduors-projects'
               className='flex items-center gap-2 hover:text-green-400 transition-colors'
             >
-              <BiLogoNetlify className='text-xl' />
-              Netlify
+             <RiVercelFill className='text-xl'/> 
+              Vercel
             </a>
           </li>
         </ul>
