@@ -2,6 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
+import pic_img from '../../assets/pic-img.png'
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
      whileInView={{scale: 1}}
      transition={{duration: 0.8, type: 'spring', stiffness: 100}}
      >
-      <Image src={assets.profile_img} alt='' className='rounded-full w-28 ml-0 mt-45 mb-[-30]' />
+      <Image src={pic_img} alt='' className='rounded-full w-28 ml-0 mt-45 mb-[-30]' />
      </motion.div>
     <motion.h3 
      initial={{y:-20, opacity:0}}

@@ -2,7 +2,7 @@ import { assets, infoList, toolsData } from '@/assets/assets';
 import Image from 'next/image';
 import React from 'react';
 import { motion } from "motion/react"
-
+import pic_img from '../../assets/pic-img.png'
 
 const About = () => {
   return (
@@ -35,7 +35,7 @@ const About = () => {
              whileInView={{opacity:1, scale: 1}}
              transition={{duration: 0.2}}
              className='w-64 sm:w-80 rounded-3xl max-w-none  mt-[-40 ] lg:mb-[-280] sm: mt-[-100] mb-[-70]'>
-             <Image src={assets.user_image} alt='user' 
+             <Image src={pic_img} alt='user' 
               className='w-80 mb-10 rounded-3xl sm:mt-[-50] lg:mt-[-260] '/>
             </motion.div>
 
