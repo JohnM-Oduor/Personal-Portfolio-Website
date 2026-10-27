@@ -2,7 +2,7 @@
 
 ### Frontend Developer | Web Designer | Creative Thinker
 
-Welcome to my personal portfolio repository! This project showcases my skills, projects, and experience in web development. I enjoy building modern, responsive, and user-friendly websites while continuously learning new technologies. This is the hyper link for my project: *https://personal-portfolio-website-4db4jqv9a-john-oduors-projects.vercel.app/*
+Welcome to my personal portfolio repository! This project showcases my skills, projects, and experience in web development. I enjoy building modern, responsive, and user-friendly websites while continuously learning new technologies. This is the hyper link for my project: *https://johnoduorpersonalportfoliowebsite.netlify.app*
 
 ## 🚀 About Me
 
